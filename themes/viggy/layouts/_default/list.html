@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+    {{ range .Pages }}
+      <h1>{{ .Title }}</h1>
+    {{ end }}
+    {{ .Content }}
+{{ end }}
