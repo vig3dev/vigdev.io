@@ -3,11 +3,53 @@ body {
   color: white
 }
 
+.frontpage {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  height: 100vh;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 100px;
+
+}
+
+p#changer:hover {
+  text-shadow: 0 0 20px #fff, 0 0 30px #93b9c0, 0 0 40px #485b85, 0 0 50px #2e2f5e, 0 0 60px #d8cbd1, 0 0 70px #e9e1e5, 0 0 80px #e6d9df;
+}
+
+p#changer {
+
+}
+
+.frontPageTitle {
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
+}
+
+@-webkit-keyframes glow {
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #93b9c0, 0 0 40px #485b85, 0 0 50px #2e2f5e, 0 0 60px #d8cbd1, 0 0 70px #e9e1e5, 0 0 80px #e6d9df;
+  }
+}
+
+nav {
+  text-align: center;
+}
+
 nav a {
-  margin: 10px;
+  font-family: 'Kanit', sans-serif;
+  margin: 8px;
+  color: white;
+}
+
+nav a:hover {
+  font-family: 'Kanit', sans-serif;
+  font-style: italic;
 }
 
 .stage {
+  font-family: 'Kanit', sans-serif;
   border-style: solid;
   border-width: 2px;
   height: 70vh;
@@ -24,9 +66,3 @@ nav a {
   border-radius: 10px;
 }
 
-.homepage-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
