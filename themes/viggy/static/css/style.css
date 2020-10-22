@@ -4,6 +4,9 @@ body {
   color: white;
   margin: 0px;
   padding: 0px;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -14,10 +17,14 @@ body {
   height: 100vh;
   font-weight: 700;
   font-size: 100px;
-
 }
 
-p#changer:hover {
+.frontpage a {
+  color: white;
+}
+
+
+a#glow:hover {
   text-shadow: 0 0 20px #fff, 0 0 30px #93b9c0, 0 0 40px #485b85, 0 0 50px #2e2f5e, 0 0 60px #d8cbd1, 0 0 70px #e9e1e5, 0 0 80px #e6d9df;
 	-webkit-text-stroke: 1px black;
 	-webkit-text-fill-color: white;
@@ -30,14 +37,33 @@ p#changer:hover {
 }
 
 #stagePage {
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 }
 
-.titleGroup {
-  height: 12vh;
-  padding-top: 3vh;
+td {
+  text-align: center;
 }
+.titleGroup {
+  display: flex;
+  height: 4vh;
+  width: 90vw;
+  padding-top: 1vh;
+  padding: 10px;
+  margin: auto;
+  margin-top: 2vh;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #4c444c;
+  border-radius: 25px;
+  font-size: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.stageTitle {
+}
+
 nav a {
   margin: 8px;
   color: white;
@@ -69,8 +95,7 @@ nav a:hover {
 }
 
 footer {
-
-  height: 4vh;
+  height: 7vh;
   width: 90vw;
   padding-top: 1vh;
   padding: 10px;

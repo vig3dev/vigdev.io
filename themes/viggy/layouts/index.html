@@ -3,9 +3,8 @@
 </head>
 
 <body>
-   
 <div class="frontpage">
-    <p id="changer" onclick="clickChange('stagePage')">vigdev</p>
+    <a id="glow" href="#stagePage">vigdev</a>
 </div>
 
 <div id="stagePage">
@@ -13,24 +12,24 @@
     <h1 class="stageTitle">{{.Title}}</h1>
   </div>
 
- <div class="stageGroup"> 
-  <header class="homepage-header">
-    {{- partial "header.html" . -}}
-  </header>
-  <div class="stage">
-    this is stage box
-    <br>
-    <div>
-      {{ range first 10 .Site.RegularPages }}
-        <ul>
-          <li><a class="stageTitle" href="{{ .Permalink }}">{{ .Title }}</a></li>
-        </ul>
-      {{ end }}
+  <div class="stageGroup"> 
+    <header class="homepage-header">
+      {{- partial "header.html" . -}}
+    </header>
+    <div class="stage">
+      this is stage box
+      <br>
+      <div>
+        {{ range first 10 .Site.RegularPages }}
+          <ul>
+            <li><a class="stageTitle" href="{{ .Permalink }}">{{ .Title }}</a></li>
+          </ul>
+        {{ end }}
+      </div>
     </div>
+    <footer>
+      {{- partial "footer.html" . -}}
+    </footer>
   </div>
-</div>
-  <footer>
-    {{- partial "footer.html" . -}}
-  </footer>
 </div>
 </body>
