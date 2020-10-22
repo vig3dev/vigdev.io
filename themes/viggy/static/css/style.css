@@ -21,6 +21,7 @@ html {
 
 .frontpage a {
   color: white;
+  text-decoration: none;
 }
 
 
@@ -41,9 +42,6 @@ a#glow:hover {
   text-align: center;
 }
 
-td {
-  text-align: center;
-}
 .titleGroup {
   display: flex;
   height: 4vh;
