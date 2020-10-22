@@ -38,18 +38,19 @@ a#glow:hover {
 }
 
 #stagePage {
-  min-height: 100vh;
+  height: 99vh;
   text-align: center;
+  margin-top: 1vh;
 }
 
 .titleGroup {
   display: flex;
-  height: 4vh;
+  height: 2vh;
   width: 90vw;
   padding-top: 1vh;
   padding: 10px;
   margin: auto;
-  margin-top: 2vh;
+  margin-top: 5vh;
   margin-bottom: 10px;
   background-color: white;
   color: #4c444c;
@@ -72,15 +73,15 @@ nav a:hover {
 }
 
 .stageGroup {
-  height: 80vh;
+  margin-top: 3vh;
 }
 .stage {
   border-style: solid;
   border-width: 2px;
-  height: 70vh;
+  height: 72vh;
   width: 90vw;
   margin: auto;
-  margin-bottom: 10vh;
+  margin-bottom: 8vh;
   text-align: center;
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -93,7 +94,7 @@ nav a:hover {
 }
 
 footer {
-  height: 7vh;
+  height: 5vh;
   width: 90vw;
   padding-top: 1vh;
   padding: 10px;
