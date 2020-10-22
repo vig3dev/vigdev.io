@@ -9,14 +9,12 @@
 <div class="stagePage">
   <div class="titleGroup">
     <h1 class="stageTitle">{{.Title}}</h1>
-    {{ with .Params.subtitle }}
-      <span class="subtitle">{{.}}</span>
-    {{ end }}
-
-    <header class="homepage-header">
-      {{- partial "header.html" . -}}
-    </header>
   </div>
+
+ <div class="stageGroup"> 
+  <header class="homepage-header">
+    {{- partial "header.html" . -}}
+  </header>
   <div class="stage">
     this is stage box
     <br>
@@ -28,6 +26,7 @@
       {{ end }}
     </div>
   </div>
+</div>
   <footer>
     {{- partial "footer.html" . -}}
   </footer>

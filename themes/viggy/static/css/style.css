@@ -18,6 +18,8 @@ body {
 
 p#changer:hover {
   text-shadow: 0 0 20px #fff, 0 0 30px #93b9c0, 0 0 40px #485b85, 0 0 50px #2e2f5e, 0 0 60px #d8cbd1, 0 0 70px #e9e1e5, 0 0 80px #e6d9df;
+	-webkit-text-stroke: 3px black;
+	-webkit-text-fill-color: white;
 }
 
 @-webkit-keyframes glow {
@@ -32,8 +34,8 @@ p#changer:hover {
 }
 
 .titleGroup {
-  height: 15vh;
-  padding-top: 20px;
+  height: 12vh;
+  padding-top: 3vh;
 }
 nav a {
   margin: 8px;
@@ -44,10 +46,13 @@ nav a:hover {
   font-style: italic;
 }
 
+.stageGroup {
+  height: 75vh;
+}
 .stage {
   border-style: solid;
   border-width: 2px;
-  height: 60vh;
+  height: 65vh;
   width: 90vh;
   margin: auto;
   margin-bottom: 10vh;
@@ -63,7 +68,9 @@ nav a:hover {
 }
 
 footer {
-  height: 15vh;
+  height: 9vh;
+  padding-top: 1vh;
+  padding: 10px;
   background-color: white;
   color: #4c444c;
-}
+  text-align: left;
