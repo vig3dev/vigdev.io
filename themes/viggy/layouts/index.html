@@ -1,12 +1,14 @@
-{{- partial "head.html" . -}}
+<head>
+  {{- partial "head.html" . -}}
+</head>
 
 <body>
    
 <div class="frontpage">
-    <p id="changer" onclick="clickChange()">vigdev</p>
+    <p id="changer" onclick="clickChange('stagePage')">vigdev</p>
 </div>
 
-<div class="stagePage">
+<div id="stagePage">
   <div class="titleGroup">
     <h1 class="stageTitle">{{.Title}}</h1>
   </div>
