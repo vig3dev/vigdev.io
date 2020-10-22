@@ -5,8 +5,8 @@ theme = "viggy"
 
 [ menu ]
   [[ menu.main ]]
-    name = "Home"
-    url = "/"
+    name = "About"
+    url = "/about"
     weight = 1
   [[ menu.main ]]
     name = "All Posts"
@@ -14,5 +14,5 @@ theme = "viggy"
     weight = 2
   [[ menu.main ]]
     name = "Contact"
-    url = "/about"
+    url = "/contact"
     weight = 3

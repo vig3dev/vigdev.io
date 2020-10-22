@@ -10,16 +10,16 @@ html {
   scroll-behavior: smooth;
 }
 
-.frontpage {
+#frontPage {
   display: flex;
   justify-content: center;
   align-items: baseline;
   height: 100vh;
   font-weight: 700;
-  font-size: 100px;
+  font-size: 8em;
 }
 
-.frontpage a {
+#frontPage {
   color: white;
   text-decoration: none;
 }
@@ -60,7 +60,15 @@ a#glow:hover {
   justify-content: center;
 }
 
-.stageTitle {
+.titleGroup a {
+  text-decoration: none;
+  color: #4c444c;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+#stageTitle {
+  color: white;
 }
 
 nav a {

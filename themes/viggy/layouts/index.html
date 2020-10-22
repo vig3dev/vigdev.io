@@ -3,29 +3,27 @@
 </head>
 
 <body>
-<div class="frontpage">
-  <a id="glow" href="#stagePage">vigdev</a>
+<div id="frontPage">
+  <a id="glow" href="#stagePage">{{ .Title }}</a>
 </div>
 
 <div id="stagePage">
   <div class="titleGroup">
-    <h1 class="stageTitle">{{.Title}}</h1>
+    <a id="stageTitle" href="#frontPage">{{ .Title }}</a>
   </div>
 
   <div class="stageGroup"> 
-    <header class="homepage-header">
+    <nav class="homepage-header">
       {{- partial "header.html" . -}}
-    </header>
+    </nav>
     <div class="stage">
       this is stage box
-      <div>
         {{ range first 10 .Site.RegularPages }}
           <ul>
-            <li><a class="stageTitle" href="{{ .Permalink }}">{{ .Title }}</a></li>
+            <li><a id="stageTitle" href="{{ .Permalink }}">{{ .Title }}</a></li>
           </ul>
         {{ end }}
-      </div>
-    </div>
+      </div>    
     <footer>
       {{- partial "footer.html" . -}}
     </footer>
