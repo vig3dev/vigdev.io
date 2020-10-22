@@ -11,6 +11,7 @@ body {
   justify-content: center;
   align-items: baseline;
   height: 100vh;
+  font-family: 'Kanit', sans-serif;
   font-weight: 700;
   font-size: 100px;
 
@@ -28,13 +29,16 @@ p#changer:hover {
 
 .stagePage {
   height: 100vh;
+}
+
+.stageTitle {
   text-align: center;
 }
 
-.titleGroup {
-  height: 15vh;
-  padding-top: 20px;
+nav {
+  text-align: center;
 }
+
 nav a {
   margin: 8px;
   color: white;
@@ -47,10 +51,9 @@ nav a:hover {
 .stage {
   border-style: solid;
   border-width: 2px;
-  height: 60vh;
+  height: 70vh;
   width: 90vh;
   margin: auto;
-  margin-bottom: 10vh;
   text-align: center;
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -63,7 +66,8 @@ nav a:hover {
 }
 
 footer {
-  height: 15vh;
-  background-color: white;
-  color: #4c444c;
+  background-color: white !important;
+  color: black;
+  height: 10vh;
 }
+

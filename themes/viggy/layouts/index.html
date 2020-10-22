@@ -1,27 +1,35 @@
 {{- partial "head.html" . -}}
 
- <body>
-  <div class="frontpage">
+<body>
+   
+<div class="frontpage">
     <p id="changer" onclick="clickChange()">vigdev</p>
-  </div>
-  <div>
-    {{ range first 10 .Site.RegularPages }}
-      <ul>
-        <li><a class="frontPageTitle" href="{{ .Permalink }}">{{ .Title }}</a></li>
-      </ul>
+</div>
+
+<div class="stagePage">
+  <div class="titleGroup">
+    <h1 class="stageTitle">{{.Title}}</h1>
+    {{ with .Params.subtitle }}
+      <span class="subtitle">{{.}}</span>
     {{ end }}
+
+    <header class="homepage-header">
+      {{- partial "header.html" . -}}
+    </header>
   </div>
-  
-  <h1 class="frontPageTitle">{{.Title}}</h1>
-  {{ with .Params.subtitle }}
-    <span class="subtitle">{{.}}</span>
-  {{ end }}
-  <header class="homepage-header">
-    {{- partial "header.html" . -}}
-  </header>
   <div class="stage">
     this is stage box
+    <br>
+    <div>
+      {{ range first 10 .Site.RegularPages }}
+        <ul>
+          <li><a class="stageTitle" href="{{ .Permalink }}">{{ .Title }}</a></li>
+        </ul>
+      {{ end }}
+    </div>
   </div>
-  <br>
-  {{- partial "footer.html" . -}}
-</body> 
+  <footer>
+    {{- partial "footer.html" . -}}
+  </footer>
+</div>
+</body>
