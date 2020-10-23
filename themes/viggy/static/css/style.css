@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #4c444c;
   font-family: 'Kanit', sans-serif;
@@ -6,24 +10,20 @@ body {
   padding: 0px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 #frontPage {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: middle;
   height: 100vh;
   font-weight: 700;
   font-size: 8em;
+
 }
 
-#frontPage {
-  color: white;
+a#glow {
   text-decoration: none;
+  color: white;
 }
-
 
 a#glow:hover {
   text-shadow: 0 0 20px #fff, 0 0 30px #93b9c0, 0 0 40px #485b85, 0 0 50px #2e2f5e, 0 0 60px #d8cbd1, 0 0 70px #e9e1e5, 0 0 80px #e6d9df;
@@ -68,7 +68,7 @@ a#glow:hover {
 }
 
 #stageTitle {
-  color: white;
+  color: #4c444c;
 }
 
 nav a {

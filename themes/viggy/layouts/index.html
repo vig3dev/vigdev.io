@@ -1,32 +1,38 @@
-<head>
+<!DOCTYPE html>
+<html>
+  <head>
   {{- partial "head.html" . -}}
-</head>
+  </head>
+  <body>
+    {{- block "main" . }}
+      <div id="frontPage">
+        <a id="glow" href="#stagePage">{{ .Title }}</a>
+      </div>
+      <div id="stagePage">
+        <div class="titleGroup">
+          <a id="stageTitle" href="#frontPage">{{ .Title }}</a>
+        </div>
 
-<body>
-<div id="frontPage">
-  <a id="glow" href="#stagePage">{{ .Title }}</a>
-</div>
+        <div class="stageGroup">
+          <nav class="homepage-header">
+          {{- partial "header.html" . -}}
+          </nav>
 
-<div id="stagePage">
-  <div class="titleGroup">
-    <a id="stageTitle" href="#frontPage">{{ .Title }}</a>
-  </div>
+          <div class="stage">
+          Simplicity is Key
+          {{ range first 10 .Pages }}
+            <ul>
+              <li><a href="{{ .Permalink }}">{{ .Title }}1</a></li>
+            </ul>
+          {{ end }}
+          </div>  
 
-  <div class="stageGroup"> 
-    <nav class="homepage-header">
-      {{- partial "header.html" . -}}
-    </nav>
-    <div class="stage">
-      this is stage box
-        {{ range first 10 .Site.RegularPages }}
-          <ul>
-            <li><a id="stageTitle" href="{{ .Permalink }}">{{ .Title }}</a></li>
-          </ul>
-        {{ end }}
-      </div>    
-    <footer>
-      {{- partial "footer.html" . -}}
-    </footer>
-  </div>
-</div>
-</body>
+          <footer>
+          {{- partial "footer.html" . -}}
+          </footer>
+        </div>
+
+      </div>
+    {{- end }}
+  </body>
+</html>
