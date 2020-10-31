@@ -2,8 +2,12 @@
   <h1>{{ .Title }}</h1>
 
   <ul>
-    {{ range .RegularPagesRecursive }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ range .Pages }}
+        <li>
+            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        </li>
     {{ end }}
   </ul>
+
+  {{ .Content }}
 {{ end }}
