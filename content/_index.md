@@ -1,8 +1,8 @@
 ---
-title: vigdev
+title: "vigdev"
 date:
 Description:
 Tags:
 Categories:
+Type: "Post"
 ---
-vigdev

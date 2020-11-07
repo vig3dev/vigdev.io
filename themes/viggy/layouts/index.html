@@ -20,11 +20,12 @@
 
           <div class="stage">
           Simplicity is Key
-          {{ range first 10 .Pages }}
-            <ul>
-              <li><a href="{{ .Permalink }}">{{ .Title }}1</a></li>
-            </ul>
-          {{ end }}
+          <br>
+          {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+          {{ range $pages }}
+          {{.Title}}
+          {{end}}
+
           </div>  
 
           <footer>
@@ -36,3 +37,4 @@
     {{- end }}
   </body>
 </html>
+
