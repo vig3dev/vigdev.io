@@ -9,7 +9,7 @@ theme = "viggy"
     url = "/about"
     weight = 1
   [[ menu.main ]]
-    name = "All Posts"
+    name = "Posts"
     url = "/posts"
     weight = 2
   [[ menu.main ]]

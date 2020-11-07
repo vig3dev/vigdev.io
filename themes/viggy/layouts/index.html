@@ -14,18 +14,27 @@
         </div>
 
         <div class="stageGroup">
-          <nav class="homepage-header">
+          <nav>
           {{- partial "header.html" . -}}
           </nav>
 
           <div class="stage">
-          Simplicity is Key
-          <br>
-          {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-          {{ range $pages }}
-          {{.Title}}
-          {{end}}
-
+            <div class="stageContent" id="changer">
+              Simplicity is Key
+              <br>
+              <br>
+              <!-- Default/ list all posts -->    
+              {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+              {{ range $pages }}
+              <a href="{{.Permalink}}">{{.Title}}</a>
+              <br>
+              {{end}}
+              <!-- About -->  
+              <div id="about">
+                about div
+              </div>
+              <!-- Contact -->  
+            </div>
           </div>  
 
           <footer>
@@ -35,6 +44,8 @@
 
       </div>
     {{- end }}
+    
   </body>
+
 </html>
 
