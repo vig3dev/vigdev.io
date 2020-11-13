@@ -119,4 +119,16 @@ footer {
 /* tab css stuff */
 .tabcontent {
   display: none;
+  animation: fadeEffect 2s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.tab a.active {
+  color: black;
+  background-color: white;
+  opacity: 50%;
 }
