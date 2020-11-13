@@ -1,3 +1,4 @@
-{{ range .Site.Menus.main }}
-  <a class="{{.Name}}"  onclick="changer()">{{ .Name }}</a>
-{{ end }} 
+
+  <a class="tablinks"  onclick="openContent(event, 'about')" id="defaultOpen">about</a>
+  <a class="tablinks"  onclick="openContent(event, 'posts')">posts</a>
+  <a class="tablinks"  onclick="openContent(event, 'contact')">contact</a>

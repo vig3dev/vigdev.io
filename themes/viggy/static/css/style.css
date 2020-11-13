@@ -114,6 +114,9 @@ footer {
   border-radius: 25px;
 }
 
-.stageContent {
 
+
+/* tab css stuff */
+.tabcontent {
+  display: none;
 }

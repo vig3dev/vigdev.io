@@ -8,13 +8,13 @@
       <div id="frontPage">
         <a id="glow" href="#stagePage">{{ .Title }}</a>
       </div>
+
       <div id="stagePage">
         <div class="titleGroup">
           <a id="stageTitle" href="#frontPage">{{ .Title }}</a>
         </div>
-
         <div class="stageGroup">
-          <nav>
+          <nav class="tab">
           {{- partial "header.html" . -}}
           </nav>
 
@@ -23,17 +23,25 @@
               Simplicity is Key
               <br>
               <br>
-              <!-- Default/ list all posts -->    
-              {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-              {{ range $pages }}
-              <a href="{{.Permalink}}">{{.Title}}</a>
-              <br>
-              {{end}}
+
               <!-- About -->  
-              <div id="about">
+              <div id="about" class="tabcontent">
                 about div
               </div>
+              <!-- Posts -->  
+              <div id="posts" class="tabcontent">
+                <!-- Default/ list all posts -->    
+                {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+                {{ range $pages }}
+                <a href="{{.Permalink}}">{{.Title}}</a>
+                <br>
+                {{end}}
+              </div>
               <!-- Contact -->  
+              <div id="contact" class="tabcontent">
+                contact div
+              </div>
+
             </div>
           </div>  
 
