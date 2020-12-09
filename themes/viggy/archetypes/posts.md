@@ -5,4 +5,5 @@ draft: true
 Description: ""
 Tags: []
 Categories: []
+layout: single
 ---

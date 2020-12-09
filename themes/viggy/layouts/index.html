@@ -3,57 +3,69 @@
   <head>
   {{- partial "head.html" . -}}
   </head>
+
   <body>
-    {{- block "main" . }}
-      <div id="frontPage">
-        <a id="glow" href="#stagePage">{{ .Title }}</a>
+
+    <div id="frontPage">
+      <a id="glow" href="#stagePage">{{ .Title }}</a>
+    </div>
+
+    <div id="stagePage">
+      <div class="titleGroup">
+        <a id="stageTitle" href="#frontPage">{{ .Title }}</a>
       </div>
+                  Simplicity is Key
 
-      <div id="stagePage">
-        <div class="titleGroup">
-          <a id="stageTitle" href="#frontPage">{{ .Title }}</a>
-        </div>
-        <div class="stageGroup">
-          <nav class="tab">
-          {{- partial "header.html" . -}}
-          </nav>
+      <div class="stageGroup">
+        <nav class="tab">
+        {{- partial "menu.html" . -}}
+        </nav>
 
-          <div class="stage">
-            <div class="stageContent" id="changer">
-              Simplicity is Key
-              <br>
-              <br>
+        <div class="stage">
+          <div class="stageContent" id="changer">
+            <br>
+            <br>
 
-              <!-- About -->  
-              <div id="about" class="tabcontent">
-                about div
-              </div>
-              <!-- Posts -->  
-              <div id="posts" class="tabcontent">
-                <!-- Default/ list all posts -->    
-                {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-                {{ range $pages }}
-                <a href="{{.Permalink}}">{{.Title}}</a>
+            <!-- About -->  
+            <div id="about" class="tabcontent">
+              about div<br>
+            </div>
+
+            <!-- Posts -->  
+            <div id="posts" class="tabcontent">
+              <!-- Default/ list all posts -->    
+              {{ $pages := site.RegularPages}}
+              {{ range $pages }}
+                <div>
+                  <a  id="{{.Title}}" class="tablinks" onclick="openContent(event, '{{.Title}}')">{{.Title}}</a> 
+                  <div id="{{.Title}}" class="tabcontent">{{.Content}}hello</div>
+                </div>
+                
                 <br>
-                {{end}}
-              </div>
-              <!-- Contact -->  
-              <div id="contact" class="tabcontent">
-                contact div
-              </div>
+              {{end}}
+            </div>
+            
+            <!-- Content -->  
+            <div id="content" class="tabcontent">
+              content div
 
             </div>
-          </div>  
 
-          <footer>
-          {{- partial "footer.html" . -}}
-          </footer>
-        </div>
+            <!-- Contact -->  
+            <div id="contact" class="tabcontent">
+              contact div
+              <br>
+              email@domain.com
+            </div>
 
+          </div>
+        </div>  
+
+        <footer>
+        {{- partial "footer.html" . -}}
+        </footer>
       </div>
-    {{- end }}
-    
+    </div>
   </body>
-
 </html>
 
